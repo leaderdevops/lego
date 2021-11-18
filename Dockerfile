@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 RUN make build
 
-FROM alpine:3.10
+FROM alpine:3.13.7
 RUN apk update \
     && apk add --no-cache ca-certificates tzdata \
     && update-ca-certificates
